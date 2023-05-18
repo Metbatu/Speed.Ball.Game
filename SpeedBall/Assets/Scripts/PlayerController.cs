@@ -43,19 +43,19 @@ public class PlayerController : MonoBehaviour
             Respawn();
         }
 
-        if (rb.position.y > 17) // if the player goes too high
+        if (rb.position.y > 18) // if the player goes too high
         {
             Respawn();
         }
 
         speed += 0.1f * Time.fixedDeltaTime; // increase speed as the player moves across the ground
 
-        if (horizontalMove != 0f) // if the player is moving horizontally
-        {
-            float turn = horizontalMove * turnSpeed * Time.fixedDeltaTime; // calculate the turn amount
-            Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f); // create a Quaternion for the turn
-            rb.MoveRotation(rb.rotation * turnRotation); // apply the turn to the rigidbody rotation
-        }
+        //if (horizontalMove != 0f) // if the player is moving horizontally
+        //{
+           // float turn = horizontalMove * turnSpeed * Time.fixedDeltaTime; // calculate the turn amount
+           // Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f); // create a Quaternion for the turn
+            //rb.MoveRotation(rb.rotation * turnRotation); // apply the turn to the rigidbody rotation
+        //}
     }
 
     void OnTriggerEnter(Collider other)
